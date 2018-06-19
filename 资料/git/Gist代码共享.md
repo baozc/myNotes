@@ -1,4 +1,4 @@
-> **摘自GitHub入门与实践**    
+> **摘自GitHub入门与实践**
 
 ---
 
@@ -23,7 +23,7 @@
 - 登录GitHub网站：[GitHub][6254c822]
 > 点击gist进入![gist打开方式](http://img0.ph.126.net/VjgcIReVsgVWHQSvXI3LMw==/6631643909795285208.jpg)
 
-    >或者登录gist网站:[https://gist.github.com][83646bf0]
+> 或者登录gist网站:[https://gist.github.com][83646bf0]
 
 - Gist description... 对当前 Gist 所包含的文件进行简要的说明。说明内容应尽量简明扼要，让自己一看就知道是什么。
     - 此项目并不是必填项，所以如果内容没有值得说明的地方，这一项大可不必填写。
