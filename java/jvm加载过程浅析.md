@@ -38,7 +38,8 @@ public   class  Sample//运行时, jvm 把appmain的信息都放入方法区
 ```
 导向图：
 
-![行动向导图](http://images.cnitblog.com/i/485345/201405/301120189168918.bmp)
+
+![行动向导图](行动向导图.png)
 
 jvm加载：
 
