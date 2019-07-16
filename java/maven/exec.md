@@ -35,7 +35,7 @@ mvn exec:java -Dexec.mainClass="main方法类路径" -Dexec.args="main方法参�
       </execution>
   </executions>
   <configuration>
-      <mainClass>com.ultrapower.rcs.netty.action.echo.server.EchoServer</mainClass>
+      <mainClass>com.u.rcs.netty.action.echo.server.EchoServer</mainClass>
   </configuration>
 </plugin>
 ```
@@ -96,7 +96,7 @@ profile定义规则
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.ultrapower.rcs.netty.action.echo.server.EchoServer</mainClass>
+                    <mainClass>com.u.rcs.netty.action.echo.server.EchoServer</mainClass>
                     <arguments>
                         <argument>9001</argument>
                     </arguments>
@@ -125,7 +125,7 @@ profile定义规则
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.ultrapower.rcs.netty.action.echo.client.EchoClient</mainClass>
+                    <mainClass>com.u.rcs.netty.action.echo.client.EchoClient</mainClass>
                     <arguments>
                         <argument>127.0.0.1</argument>
                         <argument>9001</argument>
