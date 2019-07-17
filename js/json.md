@@ -16,5 +16,13 @@
   console.log(jsonStr);
 
   var json = eval("(" + jsonStr + ")");
-  console.log(json) 
+  console.log(json)
+```
+
+## 判断json为空
+```javascript
+if (!$.isEmptyObject(jsonArray)) {
+//		paramStr = paramStr.substring(0,paramStr.length - 1);
+        serviceCheck(jsonArray);
+    }
 ```
