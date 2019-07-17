@@ -12,3 +12,20 @@ charles代理后
 ![网络代理](网络代理.png)
 
 在charles 中设置外部代理，填写host和port
+
+如果抓取 https 包返回结果不可看时，需要设置 ssl proxying - enable ssl proxying 用于启用指定 IP 和端口的监听，如 *:443代表监听所有 URL 端口为443的 https 请求
+
+### 手机抓包
+[手机抓包](https://www.jianshu.com/p/8034b451585b)
+[https 错误][02336ff0]
+
+  [02336ff0]: https://www.jianshu.com/p/993ffc7e05fa "Client SSL handshake failed - Remote host closed connection during handshake"
+
+### question
+- 打开电脑代理后，无法抓包
+    - **除了配置不对，可能本地启动了个8888端口的服务，两者端口冲突导致**
+    - 修改`charles`端口
+- 手机代理抓包，没反应，手机也无法上网
+    - charles获取本地ip有问题，正常应该获取到一个ip，在`help-locaal ip address`中查看
+    - 网线换无线试下
+    - 网线插头多插拔几次试试
