@@ -1,0 +1,52 @@
+{
+  "index_patterns": "nginx_json_elastic",
+  "settings": {
+    "index.refresh_interval": "5s"
+  },
+  "mappings": {
+    "doc": {/** typeName **/
+      "dynamic_templates": [
+        {
+          "message_field": { /**动态字段名，无意义*/
+            "mapping": {
+              "norms": false,
+              "type": "text"
+            },
+            "match_mapping_type": "string", /**匹配映射类型为string*/
+            "match": "message" /**匹配模式，完全匹配message*/
+          }
+        },
+        {
+          "string_fields": {
+            "mapping": {
+              "type": "text",
+              "norms": false,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "match_mapping_type": "string",
+            "match": "*"
+          }
+        }
+      ],
+      "properties": {
+        "geoip": {
+          "dynamic": true,
+          "properties": {
+            "location": {
+              "type": "geo_point"
+            }
+          },
+          "type": "object"
+        },
+        "request": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
