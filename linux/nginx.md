@@ -18,7 +18,7 @@ set $a hello;
 
 ### nginx配置
 - 配置文件在nginx\conf\nginx.conf中
-- 在nginx.conf中可以使用includ引用配置文件，方便多服务代理管理，如：`include/Ultrapower/nginx-1.9.12/vhosts/public/*;`
+- 在nginx.conf中可以使用includ引用配置文件，方便多服务代理管理，如：`include/my/nginx-1.9.12/vhosts/public/*;`
 - 在server中`location /meopen`表示匹配/meopn路径时代理
     - 在location中，proxy_pass可以另外指定路径，如：proxy_pass : htpp://www.baidu.com
 - upstream可以配置服务器地址
