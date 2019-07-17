@@ -16,9 +16,14 @@ freeswitch默认配置为使用sip.js。
     <param name="tls-cert-dir" value="/usr/local/freeswitch/certs"/>
     <param name="wss-binding" value=":7443"/>
     ```
-2. 修改`/conf/var.xml`文件中，增加
+2. 修改`/conf/vars.xml`文件中，增加
     ```xml
     <X-PRE-PROCESS cmd=="set" data="proxy_media=true"/>
+    ```
+    修改`internal_ssl_enable`和`external_ssl_enable`为`true`
+    ```xml
+    <X-PRE-PROCESS cmd="set" data="internal_ssl_enable=true"/>
+    <X-PRE-PROCESS cmd="set" data="external_ssl_enable=true"/>
     ```
 3. 修改`/conf/sip_profiles/internal.xml`文件，设置`inbound-proxy-media`和`inbound-late-negotiation`为`true`
     ```xml
@@ -73,7 +78,7 @@ freeswitch wss.pem证书默认存放在freeswitch安装目录certs中，即`/usr
 #### 证书集成
 
 ```bash
-echo '' >> /usr/local/freeswitch/certs/wss.pem && cat _.ultrapower.com.cn.crt >> /usr/local/freeswitch/certs/wss.pem && cat _.ultrapower.com.cn.key >> /usr/local/freeswitch/certs/wss.pem && cat root.crt >> /usr/local/freeswitch/certs/wss.pem
+echo '' >> /usr/local/freeswitch/certs/wss.pem && cat _.u.com.cn.crt >> /usr/local/freeswitch/certs/wss.pem && cat _.u.com.cn.key >> /usr/local/freeswitch/certs/wss.pem && echo '' >> /usr/local/freeswitch/certs/wss.pem && cat root.crt >> /usr/local/freeswitch/certs/wss.pem
 ```
 
 集成证书后，需要重启服务
