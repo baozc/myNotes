@@ -88,7 +88,7 @@ public void ss(){
 - `ctrl-i` _斜体字_
 - `ctrl-alt-b` **粗体字**
 - `ctrl-'` `代码块`
-- [ ] `alt-t` 添加任务，未完成
+- [ ] `alt-t` 添加任务，未完成 `shift-cmd-x`
 - [x] `alt-d` 添加任务，已完成
 - `alt-u` 添加无序排列，<kbd>ul</kbd>
 - `alt-o` 添加有序排列，<kbd>ol</kbd>
