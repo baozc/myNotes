@@ -1,6 +1,6 @@
-## 使用docker流程  
+## 使用docker流程
 
-...省略安装、下载步骤  
+...省略安装、下载步骤
 
 ### 单独启动容器
 
@@ -11,10 +11,10 @@
 
 ### 使用docker-compose启动容器
 
-1. 使用 `docker network`创建网桥  
+1. 使用 `docker network`创建网桥
 		`docker network create --subnet=30.1.1.0/24  bao_tomcat`
 2. 在docker目录下创建新compose目录bao
-3. 在目录bao下创建docker-compose.yml文件  
+3. 在目录bao下创建docker-compose.yml文件
 		`docker-compose`默认执行名称为docker-compose.yml的配置文件，如果名称不对需要手指定`-f 文件名`参数，具体参数看`docker-compose --help`
 4. 配置docker-compose.yml
 	```yml

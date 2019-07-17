@@ -3,17 +3,17 @@
 　　scripts 在执行之前，最怕的就是出现问题了！那么我们如何 debug 呢？有没有办法不需要透过直接执行该 scripts 就可以来判断是否有问题呢！？呵呵！ 当然是有的！我们就直接以 bash 的相关参数来进行判断吧！
 
 ```bash
-[root@linux ~]# sh [-nvx] scripts.sh
+[root@linux ~]$ sh [-nvx] scripts.sh
 参数：
 -n ：不要执行 script，仅查询语法的问题；
 -v ：再执行 sccript 前，先将 scripts 的内容输出到屏幕上；
 -x ：将使用到的 script 内容显示到屏幕上，这是很有用的参数！
-范例：
-范例一：测试 sh16.sh 有无语法的问题？
-[root@linux ~]# sh -n sh16.sh
+#范例：
+#范例一：测试 sh16.sh 有无语法的问题？
+[root@linux ~]$ sh -n sh16.sh
 # 若语法没有问题，则不会显示任何信息！
-范例二：将 sh15.sh 的执行过程全部列出来～
-[root@linux ~]# sh -x sh15.sh
+#范例二：将 sh15.sh 的执行过程全部列出来～
+[root@linux ~]$ sh -x sh15.sh
 + PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/vbird/bin
 + export PATH
 + for animal in dog cat elephant
