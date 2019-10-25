@@ -1,4 +1,10 @@
+## 破解
+[破解教程](https://zhile.io/2017/07/07/charles-proxy-usage-and-license.html)
+
 ### 外部处理设置
+
+[shadowsocks-NG配置](http://wangjiawen.farbox.com/skill/shadowsocks-work-with-charles)
+
 > Charles 的原理是把自己设置成系统的代理服务器，但是在中国，由于工作需要，我们常常需要使用 Google 搜索，所以大部分程序员都有自己的翻墙软件，而这些软件的基本原理，也是把自己设置成系统的代理服务器，来做到透明的翻墙。
 
 > 为了使得两者能够和平共处，我们可以在 Charles 的External Proxy Settings中，设置翻墙的代理端口以及相关信息。同时，我们也要关闭相关翻墙软件的自动设置，使其不主动修改系统代理，避免 Charles 失效。
@@ -26,6 +32,11 @@ charles代理后
     - **除了配置不对，可能本地启动了个8888端口的服务，两者端口冲突导致**
     - 修改`charles`端口
 - 手机代理抓包，没反应，手机也无法上网
-    - charles获取本地ip有问题，正常应该获取到一个ip，在`help-locaal ip address`中查看
+    - charles获取本地ip有问题，正常应该获取到一个ip，在`help-local ip address`中查看
+        - 默认以`local ip address`第一行为准，如下图，本机IP为`192.168.26.94`，但是charles第一行为路由IP，所以在手机端配置代理IP时，需要设置成`192.168.2.1`，如果设置成第二行本机IP，会无法访问网络
+        ![](assets/markdown-img-paste-20190719092809430.png)
     - 网线换无线试下
     - 网线插头多插拔几次试试
+
+### 手机端https证书下载
+`help - SSL Proxying - Install Charles Root Certificate on a Mobile Device`
